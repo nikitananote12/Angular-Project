@@ -1,0 +1,29 @@
+<app-header ></app-header>
+<div class="container mt-5">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <table style="border: black 5px;;" class="table table-striped">
+            <thead>
+                <tr class="bg info ">
+                    <td>Book Name</td>
+                    <td>Book Price</td>
+                    <td>Book Description</td>
+                    <td>Remove Book</td>
+                    <td>Edit Book</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of book">
+                    <td>{{book.bookname}}</td>
+                    <td>{{book.bookprice}}</td>
+                    <td>{{book.bookdesc}}</td>
+                    <td>
+                        <button class="btn btn-danger p-1" style="width: 60px; height: 25px;" (click)="removeBook(book.bookid)">Delete</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-info p-1" style="width: 60px; height: 25px;" (click)="updateBook(book.bookid)">Edit</button>
+                    </td>
+                </tr>               
+            </tbody>
+        </table>
+    </div>
+</div>

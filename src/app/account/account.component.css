@@ -1,0 +1,20 @@
+.bg{
+    background: url('/assets/images/library.jpg') no-repeat ;
+    background-size: cover;
+    height: 100vh;
+}
+.form-container{
+    border: 1px solid black;
+    padding: 50px 60px;
+    margin-top: 20vh;
+    
+
+}
+.card{
+    background-color:lightgrey;
+    opacity: 0.8;
+}
+.label{
+    color:black;
+    font-weight: bold;
+}

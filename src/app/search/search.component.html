@@ -1,0 +1,31 @@
+<app-header ></app-header>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-9 col-sm-12 col-xs-12">
+            <input type="text" placeholder="Enter book name" class="forms-control" name="bookname" [(ngModel)] = "bookname">
+        </div>
+          
+        <div class="col-lg-3 col-sm-12 col-xs-12">
+            <button type="button" class="btn btn-info" (click)="searchBook()">Search</button>
+        </div>
+    </div>
+    <h2 class="mt-5 mb-4">Result</h2>
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Book Name</td>
+                    <td>Book Price</td>
+                    <td>Book Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of book"> 
+                    <td>{{book.bookname}}</td>
+                    <td>{{book.bookprice}}</td>
+                    <td>{{book.bookdesc}}</td>
+                </tr>               
+            </tbody>
+        </table>
+    </div>
+</div>
